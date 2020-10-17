@@ -1,0 +1,67 @@
+.concept {
+    background:linear-gradient(0deg,#A1938689 0%,#A1938689 50%,#A193861F 50%,#A193861F 100%);
+}
+
+.concept-img {
+    height:413px;
+    display: flex;
+    
+}
+
+.concept-img1 {
+    background-image: url(../img/andrew.png);
+    background-size: cover;
+    width: 62%; //675/1282だと切れる
+    height: 100%;
+    @include sp {
+        width: 49%;
+        background-position: 70%;
+        
+    }
+}
+.concept-img2 {
+    background-image: url(../img/joel.png);
+    background-size: cover;
+    margin-left: 11px;
+    width: 35%; //391/1282だと切れる
+    @include sp {
+        width: 49%;
+    }
+}
+
+.concept-wrap {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    @include sp {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.catch3 {
+    font-size: 4rem;//40px
+    font-family: ヒラギノ明朝 Pro, sans-serif;
+    white-space: nowrap;
+    letter-spacing: 1.6rem;
+    @include sp {
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+}
+    
+.concept-text {
+    width: 33%;//422/1282
+    font-family: ヒラギノ角ゴ Pro, sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    @include sp {
+        margin-top: 18px;
+        width: 88%;//333/375
+    }
+    
+}
+ 
+    
