@@ -1,0 +1,67 @@
+//変数
+$f-gray:#707070;
+$back1:#A193861F;
+$back2:#A1938689;
+
+
+//mixin
+
+@mixin pc {
+    @media (min-width: 960px){
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: 959px){
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: 600px){
+        @content;
+    }
+}
+
+
+
+//共通
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+    line-height: 1.9;//テキスト
+    font-family: Roboto Mono for Powerline;
+    
+}
+
+
+.title{
+    color: $f-gray;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom:  6px;
+
+    @include sp {
+        margin-bottom: 60px;
+    }
+
+    &:after {
+        display: inline-block;
+        content: "";
+        width: 6.4em;
+        border-bottom: 1px solid;
+        margin-left: 4.5rem;
+    }
+}
+
+.inner {
+    margin: 0 auto;
+    width: 100%;
+    padding: 260px 100px 70px 100px;//だいたい
+    @include sp {
+        padding: 60px 0;//だいたい
+        width: 90%;
+    }
+}

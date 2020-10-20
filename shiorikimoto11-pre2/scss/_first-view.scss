@@ -1,0 +1,46 @@
+.first-v {
+    height: 100vh;//vh画面サイズに対するわりあい
+    width: 100%;//親要素に対する割合
+    &__wrap {
+        position: absolute;
+        top: 37%;//catch1上の296/800
+        left: 8.3%;//catch2横の107/1282
+        height: 214px;//38+48+128
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+        font-size: 3.8rem;
+
+        @include sp {
+            color: #fff;
+            flex-direction: column-reverse;//flexコンテナの主軸をcolumuの逆にする、下から上
+            height: 202px;
+            font-size: 2.8rem;
+            min-width: 288px;
+            position: absolute;
+            text-shadow: 0  3px 16px #000;
+        }
+    }   
+}
+.catch1 {
+    font-family:ヒラギノ明朝 Pro,sans-serif;
+}
+.catch2 {
+    font-family: Zapfino, sans-serif;
+    line-height: 128px;
+}
+
+
+.first-view-img {
+    height: 100vh;
+    width: 53.7%;
+    background-image: url(../img/Blondwoman.png);
+    background-size: cover;
+    position: absolute;
+    right: 0%;
+    @include sp {
+        width: 100%;
+    }
+}

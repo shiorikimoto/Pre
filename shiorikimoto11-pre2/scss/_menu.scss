@@ -1,0 +1,65 @@
+.menu-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.menu-item {
+    width: 271px;
+    justify-content: space-between;
+   
+    @include sp {
+        width: 100%;
+        display: block;
+    }
+    &:not(:nth-child(3)){
+        @include sp {
+            margin-bottom: 63px;
+        }
+    } 
+    
+    .item-img {
+        width: 100%;
+        height: 271px;
+        margin-bottom: 37px;
+        
+        @include sp {
+            margin: auto;
+            width: 335px;
+            height: 271px;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            
+        }
+    }
+    .item-content {
+        padding: 0 10px;
+        @include sp {
+            margin:0 auto;
+            min-width: 300px;
+            width: 335px;//画像に揃える？
+        }
+
+        &__title {
+            font-size: 3rem;
+            margin-bottom:34px;
+            text-align: center;
+            @include sp {
+                text-align: left;
+            }
+           
+        }
+        &__text {
+            margin-bottom: 34px;
+            text-align: justify;
+        }
+        &__price {
+            text-align: right;
+        }
+    }
+}

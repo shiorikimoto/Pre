@@ -1,0 +1,63 @@
+#concept {
+    background: linear-gradient(180deg,$back1 0%, $back1 50%, $back2 50%,$back2 100%);
+}
+
+.concept-img {
+    width: 100%;
+    height: 413px;
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 69px;//画像からtextまで
+    @include sp {
+        height: 205px;
+        margin-bottom: 50px;//画像からcatchまで
+    }
+    &__img1 {
+        background-image: url(../img/andrew.png);
+        background-size: cover;
+        width: 62.7%;//？他を参考にした
+        height: 100%;
+        @include sp {
+            width: 49%;
+            background-position: 70%;//背景画像の表示位置の指定
+        }
+    }
+    &__img2 {
+        background-image: url(../img/joel.png);
+        background-size: cover;
+        width: 36.3%;//？
+        @include sp {
+            width: 49%;
+        }
+    }
+    
+}
+
+.concept-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    @include sp {
+        display: block;
+        text-align: center;
+    }
+    
+    .catch3{
+        font-size: 4rem;
+        white-space: nowrap;
+        @include sp {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+        }
+    }
+    .concept-text {
+        width: 45.7%;
+        font-family: ヒラギノ角ゴ Pro, sans-serif;
+        text-align: justify;
+        @include sp {
+            font-size: 1.6rem;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 68px 487px 77px 68px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;//背景に隠れるのを前に出す
+    @include sp {
+        justify-content: space-between;
+        padding: 24px 20px;
+        position: static;
+    }
+    
+}
+
+.hd-logo {
+    font-size: 3.8rem;
+    font-weight: bold;
+    margin-right: 20px;
+    white-space: nowrap;//改行させない
+}
+
+nav {
+    //z-index: 10;//背景に隠れるのを前に出す←headerごと
+    @include sp {
+        display: none;
+    }
+    
+    ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    color: $f-gray;
+    }       
+        
+}
+
+
+li {
+    &:hover {
+        text-decoration: underline;
+        color: #000000;
+    }
+    &:not(:last-child){
+        margin-right: 20px;      
+    }
+
+}
+
+.ham {
+    @include sp {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 16px;
+        height: 14px;
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #3B4043;
+            &:nth-child(3) {
+                width: 80%;
+            }
+        }
+    }
+}
+

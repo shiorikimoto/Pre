@@ -1,0 +1,77 @@
+#access {
+    background-color: $back1;
+    
+    .a-inner {
+        margin: 0 auto;
+        width: 100%;
+        @include sp {
+            padding: 60px 0px;//だいたい
+            width: 90%;
+        }
+    }
+
+        .title {
+            padding: 260px 100px 6px 100px;//だいたい
+            @include sp {
+                padding-left: 0px;//だいたい
+            }
+        }
+
+        .access-wrap {
+            height: 396px;//だいたい
+            display: flex;
+            justify-content: space-between;
+            @include sp {
+                flex-direction: column-reverse;
+                height: 513px;
+            }
+        }
+}
+
+.adress {
+    background-color: #D0C5BA;
+    width: 39.5%;
+    height: 100%;
+    position: relative;
+    @include sp {
+        width: 100%;
+    }
+    &-content {
+        position: absolute;
+        top: 101px;
+        left: 20.5%;
+        @include sp {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+
+        }
+        &__name {
+            margin-bottom: 20px;
+            color: #00000038;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        &__indeed {
+            line-height: 2.5;
+            color: #ffffff;
+        }
+    }
+    
+    
+    
+}
+
+.map {
+    width: 100% - 39.5%;
+    height: 100%;
+    @include sp {
+        width: 100%;
+        height: 230px;
+    }
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
